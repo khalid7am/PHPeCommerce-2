@@ -1,0 +1,5 @@
+RewriteEngine On
+RewriteRule ^404$ 404.php [L]
+
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteRule ^([^\.]+)$ $1.php [NC,L]
