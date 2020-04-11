@@ -1,12 +1,10 @@
 <?php
-	//require 'inc/config.php';
-	require 'inc/panierController.php';
-	 
+	require 'inc/panierController.php';	 
 ?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
-	<title>Contacter nous | MySweater</title>
+	<title>Profil | MySweater</title>
   <?php require 'inc/head-tags.php'; ?>
 </head>
 <body class="goto-here">
@@ -15,15 +13,15 @@
 		<div class="container">
 			<div class="row no-gutters slider-text align-items-center justify-content-center">
 				<div class="col-md-9 ftco-animate text-center">
-					<p class="breadcrumbs"><span class="mr-2"><a href="index">Accueil</a></span> <span>Contacter nous</span></p>
-					<h1 class="mb-0 bread">Contacter nous</h1>
+					<p class="breadcrumbs"><span class="mr-2"><a href="index">Accueil</a></span> <span>Profil</span></p>
+					<h1 class="mb-0 bread">Mon compte</h1>
 				</div>
 			</div>
 		</div>
 	</div>
 	<section class="ftco-section contact-section bg-light">
 		<div class="container">
-			<div class="row d-flex mb-5 contact-info">
+			<!--div class="row d-flex mb-5 contact-info">
 				<div class="w-100"></div>
 				<div class="col-md-3 d-flex">
 					<div class="info bg-white p-4">
@@ -71,7 +69,7 @@
 						<img src="images/logo.png" style="display: block; margin: 0 auto" width="83%" height="80%" alt="">
 					</div>
 				</div>
-			</div>
+			</div-->
 		</div>
 	</section>
   <?php require 'inc/footer.php'; ?>

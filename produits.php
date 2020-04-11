@@ -1,11 +1,15 @@
 <?php
 	require 'inc/panierController.php';
-	require 'inc/config.php'; 
+	//require 'inc/config.php'; 
+
+	$query = $db->prepare("SELECT * FROM produits");
+	$query->execute();
+	$produits = $query->fetchAll();
 ?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
-	<title>MySweater - Produits</title>
+	<title>Produits | MySweater</title>
 	<?php require 'inc/head-tags.php'; ?>
 </head>
 <body class="goto-here">
@@ -25,150 +29,30 @@
 			<div class="row">
 				<div class="col-md-8 col-lg-12 order-md-last">
 					<div class="row">
+						<?php
+						if (is_array($produits) || is_object($produits))
+						{
+							foreach ($produits as $produit) {
+						?>
 						<div class="col-sm-6 col-md-6 col-lg-4 ftco-animate">
 							<div class="product">
-								<a class="img-prod" href="produit-detail"><img alt="Colorlib Template" class="img-fluid" src="images/product-1.jpg">
+								<a class="img-prod" href="produit-detail?idp=<?php echo $produit['id'] ?>"><img alt="Colorlib Template" class="img-fluid" src="images/<?php echo $produit['image'] ?>.jpg">
 								<div class="overlay"></div></a>
 								<div class="text py-3 px-3">
-									<h3><a href="produit-detail">CHEMISE STRUCTURÉE</a></h3>
+									<h3><a href="produit-detail"><?php echo $produit['libelle'] ?></a></h3>
 									<div class="d-flex">
 										<div class="pricing">
-											<p class="price"><span class="price-sale">190.00 DHs</span></p>
+											<p class="price"><span class="price-sale"><?php echo $produit['prix'] ?>.00 DHs</span></p>
 										</div>
 										<div class="rating">
 											<p class="text-right"><a href="#"><span class="ion-ios-star-outline"></span></a> <a href="#"><span class="ion-ios-star-outline"></span></a> <a href="#"><span class="ion-ios-star-outline"></span></a> <a href="#"><span class="ion-ios-star-outline"></span></a> <a href="#"><span class="ion-ios-star-outline"></span></a></p>
 										</div>
 									</div>
-									<p class="bottom-area d-flex px-3"><a class="add-to-cart text-center py-2 mr-1" href="panier?action=ajout&amp;idp=1&amp;q=1" ><span>Ajouter au panier <i class="ion-ios-add ml-1"></i></span></a> <a class="buy-now text-center py-2" href="produit-detail">Acheter<span><i class="ion-ios-cart ml-1"></i></span></a></p>
+									<p class="bottom-area d-flex px-3"><a class="add-to-cart text-center py-2 mr-1" href="panier?action=ajouter&amp;idp=<?php echo $produit['id'] ?>&amp;q=1" ><span>Ajouter au panier <i class="ion-ios-add ml-1"></i></span></a> <a class="buy-now text-center py-2" href="produit-detail?idp=<?php echo $produit['id'] ?>">Acheter<span><i class="ion-ios-cart ml-1"></i></span></a></p>
 								</div>
 							</div>
 						</div>
-						<div class="col-sm-6 col-md-6 col-lg-4 ftco-animate">
-							<div class="product">
-								<a class="img-prod" href="produit-detail"><img alt="Colorlib Template" class="img-fluid" src="images/product-2.jpg">
-								<div class="overlay"></div></a>
-								<div class="text py-3 px-3">
-									<h3><a href="produit-detail">CHEMISE STRUCTURÉE</a></h3>
-									<div class="d-flex">
-										<div class="pricing">
-											<p class="price"><span>190.00 DHs</span></p>
-										</div>
-										<div class="rating">
-											<p class="text-right"><a href="#"><span class="ion-ios-star-outline"></span></a> <a href="#"><span class="ion-ios-star-outline"></span></a> <a href="#"><span class="ion-ios-star-outline"></span></a> <a href="#"><span class="ion-ios-star-outline"></span></a> <a href="#"><span class="ion-ios-star-outline"></span></a></p>
-										</div>
-									</div>
-									<p class="bottom-area d-flex px-3"><a class="add-to-cart text-center py-2 mr-1" href="panier?action=ajout&amp;idp=2&amp;q=1" ><span>Ajouter au panier <i class="ion-ios-add ml-1"></i></span></a> <a class="buy-now text-center py-2" href="produit-detail">Acheter<span><i class="ion-ios-cart ml-1"></i></span></a></p>
-								</div>
-							</div>
-						</div>
-						<div class="col-sm-6 col-md-6 col-lg-4 ftco-animate">
-							<div class="product">
-								<a class="img-prod" href="produit-detail"><img alt="Colorlib Template" class="img-fluid" src="images/product-3.jpg">
-								<div class="overlay"></div></a>
-								<div class="text py-3 px-3">
-									<h3><a href="produit-detail">CHEMISE STRUCTURÉE</a></h3>
-									<div class="d-flex">
-										<div class="pricing">
-											<p class="price"><span>190.00 DHs</span></p>
-										</div>
-										<div class="rating">
-											<p class="text-right"><a href="#"><span class="ion-ios-star-outline"></span></a> <a href="#"><span class="ion-ios-star-outline"></span></a> <a href="#"><span class="ion-ios-star-outline"></span></a> <a href="#"><span class="ion-ios-star-outline"></span></a> <a href="#"><span class="ion-ios-star-outline"></span></a></p>
-										</div>
-									</div>
-									<p class="bottom-area d-flex px-3"><a class="add-to-cart text-center py-2 mr-1" href="panier?action=ajout&amp;idp=3&amp;q=1" ><span>Ajouter au panier <i class="ion-ios-add ml-1"></i></span></a> <a class="buy-now text-center py-2" href="produit-detail">Acheter<span><i class="ion-ios-cart ml-1"></i></span></a></p>
-								</div>
-							</div>
-						</div>
-						<div class="col-sm-6 col-md-6 col-lg-4 ftco-animate">
-							<div class="product">
-								<a class="img-prod" href="produit-detail"><img alt="Colorlib Template" class="img-fluid" src="images/product-4.jpg">
-								<div class="overlay"></div></a>
-								<div class="text py-3 px-3">
-									<h3><a href="produit-detail">CHEMISE STRUCTURÉE</a></h3>
-									<div class="d-flex">
-										<div class="pricing">
-											<p class="price"><span>190.00 DHs</span></p>
-										</div>
-										<div class="rating">
-											<p class="text-right"><a href="#"><span class="ion-ios-star-outline"></span></a> <a href="#"><span class="ion-ios-star-outline"></span></a> <a href="#"><span class="ion-ios-star-outline"></span></a> <a href="#"><span class="ion-ios-star-outline"></span></a> <a href="#"><span class="ion-ios-star-outline"></span></a></p>
-										</div>
-									</div>
-									<p class="bottom-area d-flex px-3"><a class="add-to-cart text-center py-2 mr-1" href="panier?action=ajout&amp;idp=4&amp;q=1" ><span>Ajouter au panier <i class="ion-ios-add ml-1"></i></span></a> <a class="buy-now text-center py-2" href="produit-detail">Acheter<span><i class="ion-ios-cart ml-1"></i></span></a></p>
-								</div>
-							</div>
-						</div>
-						<div class="col-sm-6 col-md-6 col-lg-4 ftco-animate">
-							<div class="product">
-								<a class="img-prod" href="produit-detail"><img alt="Colorlib Template" class="img-fluid" src="images/product-5.jpg">
-								<div class="overlay"></div></a>
-								<div class="text py-3 px-3">
-									<h3><a href="produit-detail">CHEMISE STRUCTURÉE</a></h3>
-									<div class="d-flex">
-										<div class="pricing">
-											<p class="price"><span>190.00 DHs</span></p>
-										</div>
-										<div class="rating">
-											<p class="text-right"><a href="#"><span class="ion-ios-star-outline"></span></a> <a href="#"><span class="ion-ios-star-outline"></span></a> <a href="#"><span class="ion-ios-star-outline"></span></a> <a href="#"><span class="ion-ios-star-outline"></span></a> <a href="#"><span class="ion-ios-star-outline"></span></a></p>
-										</div>
-									</div>
-									<p class="bottom-area d-flex px-3"><a class="add-to-cart text-center py-2 mr-1" href="panier?action=ajout&amp;idp=5&amp;q=1" ><span>Ajouter au panier <i class="ion-ios-add ml-1"></i></span></a> <a class="buy-now text-center py-2" href="produit-detail">Acheter<span><i class="ion-ios-cart ml-1"></i></span></a></p>
-								</div>
-							</div>
-						</div>
-						<div class="col-sm-6 col-md-6 col-lg-4 ftco-animate">
-							<div class="product">
-								<a class="img-prod" href="produit-detail"><img alt="Colorlib Template" class="img-fluid" src="images/product-6.jpg">
-								<div class="overlay"></div></a>
-								<div class="text py-3 px-3">
-									<h3><a href="produit-detail">CHEMISE STRUCTURÉE</a></h3>
-									<div class="d-flex">
-										<div class="pricing">
-											<p class="price"><span>190.00 DHs</span></p>
-										</div>
-										<div class="rating">
-											<p class="text-right"><a href="#"><span class="ion-ios-star-outline"></span></a> <a href="#"><span class="ion-ios-star-outline"></span></a> <a href="#"><span class="ion-ios-star-outline"></span></a> <a href="#"><span class="ion-ios-star-outline"></span></a> <a href="#"><span class="ion-ios-star-outline"></span></a></p>
-										</div>
-									</div>
-									<p class="bottom-area d-flex px-3"><a class="add-to-cart text-center py-2 mr-1" href="panier?action=ajout&amp;idp=6&amp;q=1" ><span>Ajouter au panier <i class="ion-ios-add ml-1"></i></span></a> <a class="buy-now text-center py-2" href="produit-detail">Acheter<span><i class="ion-ios-cart ml-1"></i></span></a></p>
-								</div>
-							</div>
-						</div>
-						<div class="col-sm-6 col-md-6 col-lg-4 ftco-animate">
-							<div class="product">
-								<a class="img-prod" href="produit-detail"><img alt="Colorlib Template" class="img-fluid" src="images/product-7.jpg">
-								<div class="overlay"></div></a>
-								<div class="text py-3 px-3">
-									<h3><a href="produit-detail">CHEMISE STRUCTURÉE</a></h3>
-									<div class="d-flex">
-										<div class="pricing">
-											<p class="price"><span>190.00 DHs</span></p>
-										</div>
-										<div class="rating">
-											<p class="text-right"><a href="#"><span class="ion-ios-star-outline"></span></a> <a href="#"><span class="ion-ios-star-outline"></span></a> <a href="#"><span class="ion-ios-star-outline"></span></a> <a href="#"><span class="ion-ios-star-outline"></span></a> <a href="#"><span class="ion-ios-star-outline"></span></a></p>
-										</div>
-									</div>
-									<p class="bottom-area d-flex px-3"><a class="add-to-cart text-center py-2 mr-1" href="panier?action=ajout&amp;idp=7&amp;q=1" ><span>Ajouter au panier <i class="ion-ios-add ml-1"></i></span></a> <a class="buy-now text-center py-2" href="produit-detail">Acheter<span><i class="ion-ios-cart ml-1"></i></span></a></p>
-								</div>
-							</div>
-						</div>
-						<div class="col-sm-6 col-md-6 col-lg-4 ftco-animate">
-							<div class="product">
-								<a class="img-prod" href="produit-detail"><img alt="Colorlib Template" class="img-fluid" src="images/product-8.jpg">
-								<div class="overlay"></div></a>
-								<div class="text py-3 px-3">
-									<h3><a href="produit-detail">CHEMISE STRUCTURÉE</a></h3>
-									<div class="d-flex">
-										<div class="pricing">
-											<p class="price"><span>190.00 DHs</span></p>
-										</div>
-										<div class="rating">
-											<p class="text-right"><a href="#"><span class="ion-ios-star-outline"></span></a> <a href="#"><span class="ion-ios-star-outline"></span></a> <a href="#"><span class="ion-ios-star-outline"></span></a> <a href="#"><span class="ion-ios-star-outline"></span></a> <a href="#"><span class="ion-ios-star-outline"></span></a></p>
-										</div>
-									</div>
-									<p class="bottom-area d-flex px-3"><a class="add-to-cart text-center py-2 mr-1" href="panier?action=ajout&amp;idp=8&amp;q=1" ><span>Ajouter au panier <i class="ion-ios-add ml-1"></i></span></a> <a class="buy-now text-center py-2" href="produit-detail">Acheter<span><i class="ion-ios-cart ml-1"></i></span></a></p>
-								</div>
-							</div>
-						</div>
+						<?php }} ?>
 					</div>
 					<div class="row mt-5">
 						<div class="col text-center">

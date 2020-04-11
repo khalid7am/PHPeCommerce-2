@@ -1,11 +1,11 @@
 <?php
 	require 'inc/panierController.php';
-	require 'inc/config.php'; 
+	//require 'inc/config.php'; 
 ?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
-	<title>MySweater - Accueil</title>
+	<title>Accueil | MySweater</title>
 	<?php require 'inc/head-tags.php'; ?>
 </head>
 <body class="goto-here">
@@ -57,7 +57,7 @@
 									<p class="text-right"><a href="#"><span class="ion-ios-star-outline"></span></a> <a href="#"><span class="ion-ios-star-outline"></span></a> <a href="#"><span class="ion-ios-star-outline"></span></a> <a href="#"><span class="ion-ios-star-outline"></span></a> <a href="#"><span class="ion-ios-star-outline"></span></a></p>
 								</div>
 							</div>
-							<p class="bottom-area d-flex px-3"><a class="add-to-cart text-center py-2 mr-1" href="panier?action=ajout&amp;idp=1&amp;q=1"><span>Panier <i class="ion-ios-add ml-1"></i></span></a> <a class="buy-now text-center py-2" href="#">Acheter<span><i class="ion-ios-cart ml-1"></i></span></a></p>
+							<p class="bottom-area d-flex px-3"><a class="add-to-cart text-center py-2 mr-1" href="panier?action=ajouter&amp;idp=1&amp;q=1"><span>Panier <i class="ion-ios-add ml-1"></i></span></a> <a class="buy-now text-center py-2" href="#">Acheter<span><i class="ion-ios-cart ml-1"></i></span></a></p>
 						</div>
 					</div>
 				</div>
@@ -75,7 +75,7 @@
 									<p class="text-right"><a href="#"><span class="ion-ios-star-outline"></span></a> <a href="#"><span class="ion-ios-star-outline"></span></a> <a href="#"><span class="ion-ios-star-outline"></span></a> <a href="#"><span class="ion-ios-star-outline"></span></a> <a href="#"><span class="ion-ios-star-outline"></span></a></p>
 								</div>
 							</div>
-							<p class="bottom-area d-flex px-3"><a class="add-to-cart text-center py-2 mr-1" href="panier?action=ajout&amp;idp=2&amp;q=1"><span>Panier <i class="ion-ios-add ml-1"></i></span></a> <a class="buy-now text-center py-2" href="#">Acheter<span><i class="ion-ios-cart ml-1"></i></span></a></p>
+							<p class="bottom-area d-flex px-3"><a class="add-to-cart text-center py-2 mr-1" href="panier?action=ajouter&amp;idp=2&amp;q=1"><span>Panier <i class="ion-ios-add ml-1"></i></span></a> <a class="buy-now text-center py-2" href="#">Acheter<span><i class="ion-ios-cart ml-1"></i></span></a></p>
 						</div>
 					</div>
 				</div>
@@ -93,7 +93,7 @@
 									<p class="text-right"><a href="#"><span class="ion-ios-star-outline"></span></a> <a href="#"><span class="ion-ios-star-outline"></span></a> <a href="#"><span class="ion-ios-star-outline"></span></a> <a href="#"><span class="ion-ios-star-outline"></span></a> <a href="#"><span class="ion-ios-star-outline"></span></a></p>
 								</div>
 							</div>
-							<p class="bottom-area d-flex px-3"><a class="add-to-cart text-center py-2 mr-1" href="panier?action=ajout&amp;idp=3&amp;q=1"><span>Panier <i class="ion-ios-add ml-1"></i></span></a> <a class="buy-now text-center py-2" href="#">Acheter<span><i class="ion-ios-cart ml-1"></i></span></a></p>
+							<p class="bottom-area d-flex px-3"><a class="add-to-cart text-center py-2 mr-1" href="panier?action=ajouter&amp;idp=3&amp;q=1"><span>Panier <i class="ion-ios-add ml-1"></i></span></a> <a class="buy-now text-center py-2" href="#">Acheter<span><i class="ion-ios-cart ml-1"></i></span></a></p>
 						</div>
 					</div>
 				</div>
@@ -111,7 +111,7 @@
 									<p class="text-right"><a href="#"><span class="ion-ios-star-outline"></span></a> <a href="#"><span class="ion-ios-star-outline"></span></a> <a href="#"><span class="ion-ios-star-outline"></span></a> <a href="#"><span class="ion-ios-star-outline"></span></a> <a href="#"><span class="ion-ios-star-outline"></span></a></p>
 								</div>
 							</div>
-							<p class="bottom-area d-flex px-3"><a class="add-to-cart text-center py-2 mr-1" href="panier?action=ajout&amp;idp=4&amp;q=1"><span>Panier <i class="ion-ios-add ml-1"></i></span></a> <a class="buy-now text-center py-2" href="#">Acheter<span><i class="ion-ios-cart ml-1"></i></span></a></p>
+							<p class="bottom-area d-flex px-3"><a class="add-to-cart text-center py-2 mr-1" href="panier?action=ajouter&amp;idp=4&amp;q=1"><span>Panier <i class="ion-ios-add ml-1"></i></span></a> <a class="buy-now text-center py-2" href="#">Acheter<span><i class="ion-ios-cart ml-1"></i></span></a></p>
 						</div>
 					</div>
 				</div>
@@ -143,7 +143,7 @@
 									<p class="text-right"><a href="#"><span class="ion-ios-star-outline"></span></a> <a href="#"><span class="ion-ios-star-outline"></span></a> <a href="#"><span class="ion-ios-star-outline"></span></a> <a href="#"><span class="ion-ios-star-outline"></span></a> <a href="#"><span class="ion-ios-star-outline"></span></a></p>
 								</div>
 							</div>
-							<p class="bottom-area d-flex px-3"><a class="add-to-cart text-center py-2 mr-1" href="panier?action=ajout&amp;idp=5&amp;q=1"><span>Panier <i class="ion-ios-add ml-1"></i></span></a> <a class="buy-now text-center py-2" href="#">Acheter<span><i class="ion-ios-cart ml-1"></i></span></a></p>
+							<p class="bottom-area d-flex px-3"><a class="add-to-cart text-center py-2 mr-1" href="panier?action=ajouter&amp;idp=5&amp;q=1"><span>Panier <i class="ion-ios-add ml-1"></i></span></a> <a class="buy-now text-center py-2" href="#">Acheter<span><i class="ion-ios-cart ml-1"></i></span></a></p>
 						</div>
 					</div>
 				</div>
@@ -161,7 +161,7 @@
 									<p class="text-right"><a href="#"><span class="ion-ios-star-outline"></span></a> <a href="#"><span class="ion-ios-star-outline"></span></a> <a href="#"><span class="ion-ios-star-outline"></span></a> <a href="#"><span class="ion-ios-star-outline"></span></a> <a href="#"><span class="ion-ios-star-outline"></span></a></p>
 								</div>
 							</div>
-							<p class="bottom-area d-flex px-3"><a class="add-to-cart text-center py-2 mr-1" href="panier?action=ajout&amp;idp=6&amp;q=1"><span>Panier <i class="ion-ios-add ml-1"></i></span></a> <a class="buy-now text-center py-2" href="#">Acheter<span><i class="ion-ios-cart ml-1"></i></span></a></p>
+							<p class="bottom-area d-flex px-3"><a class="add-to-cart text-center py-2 mr-1" href="panier?action=ajouter&amp;idp=6&amp;q=1"><span>Panier <i class="ion-ios-add ml-1"></i></span></a> <a class="buy-now text-center py-2" href="#">Acheter<span><i class="ion-ios-cart ml-1"></i></span></a></p>
 						</div>
 					</div>
 				</div>
@@ -179,7 +179,7 @@
 									<p class="text-right"><a href="#"><span class="ion-ios-star-outline"></span></a> <a href="#"><span class="ion-ios-star-outline"></span></a> <a href="#"><span class="ion-ios-star-outline"></span></a> <a href="#"><span class="ion-ios-star-outline"></span></a> <a href="#"><span class="ion-ios-star-outline"></span></a></p>
 								</div>
 							</div>
-							<p class="bottom-area d-flex px-3"><a class="add-to-cart text-center py-2 mr-1" href="panier?action=ajout&amp;idp=7&amp;q=1"><span>Panier <i class="ion-ios-add ml-1"></i></span></a> <a class="buy-now text-center py-2" href="#">Acheter<span><i class="ion-ios-cart ml-1"></i></span></a></p>
+							<p class="bottom-area d-flex px-3"><a class="add-to-cart text-center py-2 mr-1" href="panier?action=ajouter&amp;idp=7&amp;q=1"><span>Panier <i class="ion-ios-add ml-1"></i></span></a> <a class="buy-now text-center py-2" href="#">Acheter<span><i class="ion-ios-cart ml-1"></i></span></a></p>
 						</div>
 					</div>
 				</div>
@@ -197,7 +197,7 @@
 									<p class="text-right"><a href="#"><span class="ion-ios-star-outline"></span></a> <a href="#"><span class="ion-ios-star-outline"></span></a> <a href="#"><span class="ion-ios-star-outline"></span></a> <a href="#"><span class="ion-ios-star-outline"></span></a> <a href="#"><span class="ion-ios-star-outline"></span></a></p>
 								</div>
 							</div>
-							<p class="bottom-area d-flex px-3"><a class="add-to-cart text-center py-2 mr-1" href="panier?action=ajout&amp;idp=8&amp;q=1"><span>Panier <i class="ion-ios-add ml-1"></i></span></a> <a class="buy-now text-center py-2" href="#">Acheter<span><i class="ion-ios-cart ml-1"></i></span></a></p>
+							<p class="bottom-area d-flex px-3"><a class="add-to-cart text-center py-2 mr-1" href="panier?action=ajouter&amp;idp=8&amp;q=1"><span>Panier <i class="ion-ios-add ml-1"></i></span></a> <a class="buy-now text-center py-2" href="#">Acheter<span><i class="ion-ios-cart ml-1"></i></span></a></p>
 						</div>
 					</div>
 				</div>

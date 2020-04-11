@@ -1,5 +1,6 @@
 <?php
 
+require 'dbconn.php';
 session_start();
 
 define('Produits', array( 1 => ['id' => 1 , 'libelle' => "CHEMISE STRUCTURÉE 1", 'prix' => "190", 'quantite' => "1", 'image' => "product-1"],

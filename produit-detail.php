@@ -1,11 +1,16 @@
 <?php
 	require 'inc/panierController.php';
-	require 'inc/config.php'; 
+	//require 'inc/config.php'; 
+
+	$idp = isset($_GET['idp'])? $_GET['idp'] : header('Location: produits');;
+	$query = $db->prepare("SELECT * FROM produits WHERE id='$idp'");
+	$query->execute();
+	$produit = $query->fetch();
 ?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
-	<title>MySweater - Détail du produit</title>
+	<title><?php echo $produit['libelle'] ?> | MySweater</title>
 	<?php require 'inc/head-tags.php'; ?>
 </head>
 <body class="goto-here">
@@ -24,19 +29,17 @@
 		<div class="container">
 			<div class="row">
 				<div class="col-lg-6 mb-5 ftco-animate">
-					<a class="image-popup" href="images/menu-2.jpg"><img alt="Colorlib Template" class="img-fluid" src="images/product-1.jpg"></a>
+					<a class="image-popup" href="images/menu-2.jpg"><img alt="Colorlib Template" class="img-fluid" src="images/<?php echo $produit['image'] ?>.jpg"></a>
 				</div>
 				<div class="col-lg-6 product-details pl-md-5 ftco-animate">
-					<h3>SURCHEMISE STRUCTURÉE</h3>
+					<h3><?php echo $produit['libelle'] ?></h3>
 					<div class="rating d-flex">
 						<p class="text-left mr-4"><a class="mr-2" href="#">5.0</a> <a href="#"><span class="ion-ios-star-outline"></span></a> <a href="#"><span class="ion-ios-star-outline"></span></a> <a href="#"><span class="ion-ios-star-outline"></span></a> <a href="#"><span class="ion-ios-star-outline"></span></a> <a href="#"><span class="ion-ios-star-outline"></span></a></p>
 						<p class="text-left mr-4"><a class="mr-2" href="#" style="color: #000;">100 <span style="color: #bbb;">Évaluation</span></a></p>
 						<p class="text-left"><a class="mr-2" href="#" style="color: #000;">500 <span style="color: #bbb;">Vendue</span></a></p>
 					</div>
-					<p class="price"><span>190.00 DHs</span></p>
-					<p>MARRON CLAIR</p>
-					<p>Surchemise coupe décontractée avec col à revers, manches longues et poignets boutonnés. Poches poitrine plaquées à rabat. Effet délavé. Fermeture sur le devant par boutons.</p>
-					<p>LE MANNEQUIN MESURE : 189 cm</p>
+					<p class="price"><span><?php echo $produit['prix'] ?>.00 DHs</span></p>
+					<p><?php echo $produit['description'] ?></p>
 					<div class="row mt-4">
 						<div class="col-md-6">
 							<div class="form-group d-flex">
@@ -66,10 +69,10 @@
 						</div>
 						<div class="w-100"></div>
 						<div class="col-md-12">
-							<p style="color: #000;">80 pièce disponible</p>
+							<p style="color: #000;"><?php echo $produit['quantite'] ?> pièce disponible</p>
 						</div>
 					</div>
-					<p><a class="btn btn-black py-3 px-5" href="panier?action=ajout&amp;idp=1&amp;q=1">Ajouter au panier</a></p>
+					<p><a class="btn btn-black py-3 px-5" href="panier?action=ajouter&amp;idp=<?php echo $produit['id'] ?>&amp;q=1">Ajouter au panier</a></p>
 				</div>
 			</div>
 		</div>
