@@ -1,6 +1,5 @@
 <?php
 	require 'inc/panierController.php';
-	//require 'inc/config.php'; 
 
 	$idp = isset($_GET['idp'])? $_GET['idp'] : header('Location: produits');;
 	$query = $db->prepare("SELECT * FROM produits WHERE id='$idp'");
