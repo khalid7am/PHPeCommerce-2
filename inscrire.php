@@ -1,6 +1,6 @@
 <?php
-	require 'inc/panierController.php';
-	//require 'inc/config.php'; 
+
+require 'inc/panierController.php';
 
 $erreur = "";
 if(isset($_POST['inscrire']) && !empty($_POST['inscrire']))
