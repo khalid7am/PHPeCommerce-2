@@ -25,22 +25,19 @@ if($action !== null)
 //Par rapport au type d'action voulu en fait l'appel à la fonction requise
 if (!$erreur){
    	switch($action){
-		Case "ajouter":
+		case "ajouter":
 			ajouterProduit($idProduit, $idc, $db);
-			//ajouterProduit($idProduit);
 			break;
 
-		Case "supprimer":
+		case "supprimer":
 			supprimerProduit($idProduit, $idc, $db);
-			//supprimerProduit($idProduit);
 			break;
 
-		Case "refresh" :
+		case "refresh" :
 			changerQuantite($idProduit, $idc, $quantite, $db);
-			//modifierQTeProduit($idProduit,$quantite);
 			break;
 
-		Default:
+		default:
 			break;
    	}
 }
