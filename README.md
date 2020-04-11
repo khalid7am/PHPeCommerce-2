@@ -9,6 +9,6 @@ Réaliser par:
  - Mariam ABALA (LPII)
  - Khalid HAMDANI (LPII)
 
-Schéma de base de données : mysweater-db-schema.pdf \n
-La base de données mysql : mysweater.sql \n
+Schéma de base de données : mysweater-db-schema.pdf <br>
+La base de données mysql : mysweater.sql <br>
 Siteweb: http://www.mysweater.ml/
