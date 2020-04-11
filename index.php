@@ -1,6 +1,5 @@
 <?php
 	require 'inc/panierController.php';
-	//require 'inc/config.php'; 
 ?>
 <!DOCTYPE html>
 <html lang="en">
