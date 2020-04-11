@@ -1,6 +1,5 @@
 <?php
 	require 'inc/panierController.php';
-	//require 'inc/config.php'; 
 
 	$query = $db->prepare("SELECT * FROM produits");
 	$query->execute();
