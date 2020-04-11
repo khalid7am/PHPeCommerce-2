@@ -1,2 +1,1 @@
-# PHPeCommerce
 # PHPeCommerce-2
