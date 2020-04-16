@@ -96,18 +96,6 @@ CREATE TABLE `messages` (
 -- --------------------------------------------------------
 
 --
--- Structure de la table `newsletters`
---
-
-CREATE TABLE `newsletters` (
-  `id` int(11) NOT NULL,
-  `email` varchar(250) NOT NULL,
-  `date` date NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=latin1;
-
--- --------------------------------------------------------
-
---
 -- Structure de la table `panier`
 --
 
@@ -182,12 +170,6 @@ ALTER TABLE `messages`
   ADD PRIMARY KEY (`id`);
 
 --
--- Index pour la table `newsletters`
---
-ALTER TABLE `newsletters`
-  ADD PRIMARY KEY (`id`);
-
---
 -- Index pour la table `panier`
 --
 ALTER TABLE `panier`
@@ -231,12 +213,6 @@ ALTER TABLE `details_commandes`
 -- AUTO_INCREMENT pour la table `messages`
 --
 ALTER TABLE `messages`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
-
---
--- AUTO_INCREMENT pour la table `newsletters`
---
-ALTER TABLE `newsletters`
   MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
 
 --
